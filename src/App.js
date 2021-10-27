@@ -1,10 +1,10 @@
 import "./App.css";
 import { useState } from "react";
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 function App() {
   // state for expence list (array)
   const [expenceList, setExpenceList] = useState([]);
-  
+
   // state for expence inputs values
   const [expence, setExpence] = useState({});
 
@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div className={styles.contentWrapper}>
-      <div>
+      {/* <div>
         <p>{expenceList.length ? getBalance() : 0} </p>
         <div>
           <p>{expenceList.length ? getTotalIncome() : 0}</p>
@@ -81,7 +81,7 @@ function App() {
               </div>
             ))
           : null}
-      </div>
+      </div> */}
     </div>
   );
 }
