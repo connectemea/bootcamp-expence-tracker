@@ -26,12 +26,15 @@ function App() {
     getSumTotal(expenceList.filter((expence) => expence.amount >= 0));
   const getTotalExpence = () =>
     getSumTotal(expenceList.filter((expence) => expence.amount < 0));
-
+  const getTotalExpence = () => getSumTotal(expenceList);
   return (
     <div>
       <div>
-        <p>{expenceList.length ? getTotalIncome() : null}</p>
-        <p>{expenceList.length ? getTotalExpence() : null}</p>
+        <p>{expenceList.length ? getTotalExpence() : 0} </p>
+        <div>
+          <p>{expenceList.length ? getTotalIncome() : 0}</p>
+          <p>{expenceList.length ? getTotalExpence() : 0}</p>
+        </div>
       </div>
       <div>
         <h1>Add expence</h1>
