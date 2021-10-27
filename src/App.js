@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState } from "react";
+import styles from './styles.module.css';
 function App() {
   // state for expence list (array)
   const [expenceList, setExpenceList] = useState([]);
@@ -45,7 +46,7 @@ function App() {
   const getBalance = () => getSumTotal(expenceList);
 
   return (
-    <div>
+    <div className={styles.contentWrapper}>
       <div>
         <p>{expenceList.length ? getBalance() : 0} </p>
         <div>
