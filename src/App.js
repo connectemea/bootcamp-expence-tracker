@@ -82,6 +82,53 @@ function App() {
             ))
           : null}
       </div> */}
+      
+      <div className={styles.title}>
+        <p>Expense Tracker</p>
+      </div>
+      
+      <div className={styles.siteBody}>
+        <div className={styles.leftSide}>
+          <div className={styles.balance}>
+            <p>Your Balance</p>
+            <p className={styles.totalBalance}>₹4999.56</p>
+          </div>
+          <div className={styles.incomeExpenseWrapper}>
+            <div className={styles.income}>
+              <p>INCOME</p>
+
+            </div>
+            <div className={styles.expense}>
+              <p>EXPENSE</p>
+
+            </div>
+          </div>
+
+          <div className={styles.newTransactionWrapper}>
+            <p>Add new transaction</p>
+            <div className={styles.addTransaction}>
+              <input type='text' placeholder='Label'></input>
+              <input type='text' placeholder='Amount'></input>
+              <p>*(negative-expense, positive-income)</p>
+              <button className={styles.addButton}>Add transaction</button>
+            </div>
+            
+          </div>
+        </div>
+
+        <div className={styles.rightSide}>
+          <div className={styles.historyWrapper}>
+            <div className={styles.historyTitle}>
+              <p>History</p>
+            </div>
+            <div className={styles.history}>
+              <p>Cash</p>
+              <p>+500</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }
