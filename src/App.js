@@ -1,18 +1,29 @@
 import "./App.css";
 import { useState } from "react";
 function App() {
+  // state for expence list (array)
   const [expenceList, setExpenceList] = useState([]);
+  
+  // state for expence inputs values
   const [expence, setExpence] = useState({});
+
+  //handle the onChange event of expence app
   const handleExpenceChange = (event) =>
     setExpence({
       ...expence,
       [event.target.name]: event.target.value,
     });
+
+  // Clear the expence state
   const clearExpence = () => setExpence({});
+
+  // handle add expence event in the app
   const handleAddExpence = () => {
     setExpenceList(expenceList.length ? [...expenceList, expence] : [expence]);
     clearExpence();
   };
+
+  // To get sum total of the expence obj
   const getSumTotal = (list) => {
     const values = list.map((expence) => expence.amount);
     return values.reduce(
@@ -22,15 +33,21 @@ function App() {
     );
   };
 
+  // To get the total income from the expence list
   const getTotalIncome = () =>
     getSumTotal(expenceList.filter((expence) => expence.amount >= 0));
+
+  // To get the total expence from the expence list
   const getTotalExpence = () =>
     getSumTotal(expenceList.filter((expence) => expence.amount < 0));
-  const getTotalExpence = () => getSumTotal(expenceList);
+
+  // To get the balance amount
+  const getBalance = () => getSumTotal(expenceList);
+
   return (
     <div>
       <div>
-        <p>{expenceList.length ? getTotalExpence() : 0} </p>
+        <p>{expenceList.length ? getBalance() : 0} </p>
         <div>
           <p>{expenceList.length ? getTotalIncome() : 0}</p>
           <p>{expenceList.length ? getTotalExpence() : 0}</p>
