@@ -94,13 +94,13 @@ function App() {
             <p className={styles.totalBalance}>₹4999.56</p>
           </div>
           <div className={styles.incomeExpenseWrapper}>
-            <div className={styles.income}>
+            <div className={styles.incomeWrapper}>
               <p>INCOME</p>
-
+              <p className={styles.income}>₹6000</p>
             </div>
-            <div className={styles.expense}>
+            <div className={styles.expenseWrapper}>
               <p>EXPENSE</p>
-
+              <p className={styles.expense}>₹2475</p>
             </div>
           </div>
 
