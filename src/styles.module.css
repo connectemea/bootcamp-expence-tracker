@@ -1,4 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
 .contentWrapper{
-    width:100%;
-    height:100%;
+    width:100vw;
+    height:100vh;
+    background-color: #E5E5E5;
+}
+
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.title p{
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.siteBody{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.balance p{
+    font-size: 29px;
+    font-weight: 400;
+}
+
+.balance .totalBalance{
+    font-size: 55px;
+    font-weight: 800;
+}
+
+.siteBody .incomeExpenseWrapper{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 32px -6px rgba(0, 0, 0, 0.25);
+}
+
+.siteBody .incomeExpenseWrapper .incomeWrapper{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid #202020;
+}
+
+.incomeExpenseWrapper .income{
+    color: #47DA44;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.incomeExpenseWrapper .expenseWrapper{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.incomeExpenseWrapper .expense{
+    color: #F41010;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.addTransaction{
+    background-color: white;
+    padding: 18px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 32px -6px rgba(0, 0, 0, 0.25);
+}
+
+.addTransaction input{
+    border-radius: 4px;
+    border: 1px solid rgba(108, 92, 184, 0.79);
+}
+
+.addTransaction p{
+    font-size: 12px;
+}
+
+.addTransaction button{
+    width: 100%;
+    height: 30px;
+    margin-top: 12px;
+    background-color: #6C5CB8;
+    border: none;
+    border-radius: 5px;
+}
+
+.historyWrapper .history{
+    background-color: white;
+    display: flex;
+    padding: 10px;
+    width: 340px;
+    justify-content: space-between;
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.25);
+    border-right: 5px solid #75E372;
 }
